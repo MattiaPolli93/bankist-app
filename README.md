@@ -8,4 +8,4 @@
 
 ## Description
 
-Simulation of a bank-like web application
+Simulation of a home banking-like web application
