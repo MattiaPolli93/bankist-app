@@ -73,13 +73,13 @@ const displayMovements = function(movements) {
 
         containerMovements.insertAdjacentHTML("afterbegin", html);
     });
-}
+};
 
 // Display calculated balance
 const calcDisplayBalance = function(acc) {
     acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
     labelBalance.textContent = `${acc.balance}€`;
-}
+};
 
 // Show summaries below
 const calcDisplaySummary = function(acc) {
@@ -101,7 +101,7 @@ const calcDisplaySummary = function(acc) {
         })
         .reduce((acc, int) => acc + int, 0);
     labelSumInterest.textContent = `${interest}€`;
-}
+};
 
 // Create Username
 const createUsernames = function(accs) { // Accounts
@@ -112,7 +112,7 @@ const createUsernames = function(accs) { // Accounts
         .map(name => name[0])
         .join("");
     })
-}
+};
 
 createUsernames(accounts);
 
@@ -126,7 +126,7 @@ const updateUI = function(acc) {
 
     // Display summary
     calcDisplaySummary(acc);
-}
+};
 
 // Event handlers
 let currentAccount;
@@ -183,7 +183,7 @@ btnLoan.addEventListener("click", function(e) {
     }
     
     inputLoanAmount.value = "";
-})
+});
 
 // Close account
 btnClose.addEventListener("click", function(e) {
@@ -201,4 +201,4 @@ btnClose.addEventListener("click", function(e) {
     }
 
     inputCloseUsername.value = inputClosePin.value = "";
-})
+});
