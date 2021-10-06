@@ -210,6 +210,10 @@ nav {
     cursor: pointer;
 }
 
+.btn--sort:hover {
+    color: #66c873;
+}
+
 /* Operations */
 .operation {
     border-radius: 1rem;
