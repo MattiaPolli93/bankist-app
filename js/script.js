@@ -210,7 +210,7 @@ let sorted = false;
 
 btnSort.addEventListener("click", function(e) {
     e.preventDefault();
-    !sorted ? btnSort.innerHTML = "HISTORY" : btnSort.innerHTML = "&downarrow; SORT";
+    btnSort.innerHTML = !sorted ? "HISTORY" : "&downarrow; SORT";
     displayMovements(currentAccount.movements, !sorted);
     sorted = !sorted;
-})
+});
