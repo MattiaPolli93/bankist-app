@@ -10,13 +10,11 @@ const startLogoutTimer = function() {
 
         // Stop timer and log out user
         if (time === 0) {
-            setTimeout(() => {
-                labelWelcome.textContent = `Log in to get started`;
-            }, 5000);
+            setTimeout(() => labelWelcome.textContent = "Log in to get started", 5000);
             
             clearInterval(timer);
 
-            labelWelcome.textContent = `You have successfully logged out!`;
+            labelWelcome.textContent = "You have successfully logged out!";
             containerApp.style.opacity = 0;
         }
 
