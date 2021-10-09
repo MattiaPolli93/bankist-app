@@ -109,7 +109,7 @@ nav {
     max-width: 100rem;
 
     /* NOTE This creates the fade in/out animation */
-    opacity: 0;
+    opacity: 1;
     transition: all 1s;
 }
 
@@ -149,7 +149,7 @@ nav {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #eee;
-    padding: 2.25rem 4rem;
+    padding: 2.25rem 3rem;
 }
 
 .movements__type {
@@ -314,4 +314,81 @@ h2 {
 
 .timer {
     font-weight: 600;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    .login {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login__input {
+        margin-right: 0;
+    }
+
+    .login__input--pin {
+        margin: 5px 0;
+    }
+
+    .app {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .balance {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0;
+    }
+
+    .summary {
+        margin-top: 0;
+    }
+
+    .logout-timer {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .movements__row {
+        padding: 2.25rem 1rem;
+    }
+
+    .summary {
+        flex-direction: column;
+    }
+
+    .summary__label {
+        margin-top: 10px;
+    }
+
+    .btn--sort {
+        margin-left: 50%;
+    }
+
+    .form--transfer,
+    .form--loan,
+    .form--close {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .operation input {
+        margin: 5px 0;
+    }
+
+    .form__btn {
+        width: 50px;
+    }
+
+    .operation {
+        padding: 1rem 2rem;
+    }
+    
+    .operation h2 {
+        text-align: center;
+    }
 }
