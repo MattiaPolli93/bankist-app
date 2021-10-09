@@ -1,5 +1,37 @@
 "use strict";
 
+// Logout timer
+const startLogoutTimer = function() {
+    const tick = function() {
+        const min = String(Math.trunc(time / 60)).padStart(2, 0);
+        const sec = String(time % 60).padStart(2, 0);
+
+        labelTimer.textContent = `${min}:${sec}`;
+
+        // Stop timer and log out user
+        if (time === 0) {
+            setTimeout(() => {
+                labelWelcome.textContent = `Log in to get started`;
+            }, 5000);
+            
+            clearInterval(timer);
+
+            labelWelcome.textContent = `You have successfully logged out!`;
+            containerApp.style.opacity = 0;
+        }
+
+        time--;
+    };
+
+    // Set time to 5 minutes
+    let time = 300;
+
+    // Call timer every second
+    tick();
+    const timer = setInterval(tick, 1000);
+    return timer;
+};
+
 // Format date
 const formatMovementDate = function(date, locale) {
     const calcDaysPassed = (date1, date2) => Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
