@@ -109,7 +109,7 @@ nav {
     max-width: 100rem;
 
     /* NOTE This creates the fade in/out animation */
-    opacity: 1;
+    opacity: 0;
     transition: all 1s;
 }
 
